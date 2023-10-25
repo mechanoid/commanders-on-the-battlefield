@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": ["deno.window", "dom"]
+  },
+  "nodeModulesDir": true,
+  "tasks": {
+    "dev": "deno run --watch --allow-net --allow-read=. scripts/serve.ts",
+    "build:browser": "deno run --allow-read --allow-run --allow-write=dist --allow-env=ESBUILD_BINARY_PATH,HOME ./scripts/build.browser.ts"
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.204.0/",
+    "esbuild": "https://deno.land/x/esbuild@v0.19.4/mod.js",
+    "esbuild_deno_loader": "https://deno.land/x/esbuild_deno_loader@0.8.2/mod.ts"
+  }
+}
